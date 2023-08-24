@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Section, type: :model do
   subject do
-    @user = User.create!(name: 'Jawad', email: 'user@domain.com', password: 'password', id: 1)
-    @icon_file = fixture_file_upload(Rails.root.join('spec', 'fixtures', 'files', 'logo.png'), 'image/png')
+    @user = User.create!(name: 'Jawad', email: 'user@domain.com', password: 'password')
+    @icon_file = fixture_file_upload(Rails.root.join('spec', 'images', 'logo.png'), 'image/png')
     @section = Section.create(name: 'Food', icon: @icon_file, user_id: @user.id)
   end
 

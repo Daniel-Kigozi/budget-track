@@ -6,7 +6,7 @@ RSpec.describe 'payment', type: :feature do
       User.destroy_all
       Section.destroy_all
       @user = User.create(name: 'Jawad', email: 'email@domain.com', password: 'password')
-      @icon_file = fixture_file_upload(Rails.root.join('spec', 'fixtures', 'files', 'logo.png'), 'image/png')
+      @icon_file = fixture_file_upload(Rails.root.join('spec', 'images', 'logo.png'), 'image/png')
       @section = Section.create(name: 'Foods', icon: @icon_file, user_id: @user.id)
       visit new_user_session_path
       fill_in 'Email', with: 'email@domain.com'
@@ -14,7 +14,7 @@ RSpec.describe 'payment', type: :feature do
       click_button 'Log in'
       click_link 'Add New Section'
       fill_in 'Name', with: 'school'
-      attach_file('Icon', "#{Rails.root}/spec/fixtures/files/logo.png")
+      attach_file('Icon', "#{Rails.root}/spec/images/logo.png")
       click_button 'Submit'
       visit user_section_path(user_id: @user.id, id: @section.id)
       click_link 'Add New'

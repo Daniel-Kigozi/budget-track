@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
     @current_user = current_user
     @payment_create = @current_user.payments.build(payment_params)
     if @payment_create.save
-      @section_payments = SectionPayment.create(section_id: params[:section], payment_id: @payment_create.id)
+      @section_payments = SectionPayment.create(section_id: params[:section], payments_id: @payment_create.id)
       redirect_to "/users/#{current_user.id}/sections/"
       flash[:notice] = 'Successfully create'
     else

@@ -4,7 +4,7 @@ RSpec.describe 'Sections Page', type: :system do
   describe 'Section /index' do
     before :each do
       @user = User.create!(name: 'Jawad', email: 'email@domain.com', password: 'password')
-      @icon_file = fixture_file_upload(Rails.root.join('spec', 'fixtures', 'files', 'logo.png'), 'image/png')
+      @icon_file = fixture_file_upload(Rails.root.join('spec', 'images', 'logo.png'), 'image/png')
       @section = Section.create(name: 'Foods', icon: @icon_file, user_id: @user.id)
       @user.save!
       visit new_user_session_path

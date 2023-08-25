@@ -87,7 +87,7 @@ test:
 #
 production:
   <<: *default
-  database: budgettrack
+   url: <%= ENV['DATABASE_URL'] %>
   username: budget
   host: localhost
   password: 123456

@@ -92,6 +92,9 @@ Example command:
   rails s
 ```
 
+### DEPLOYMENT
+- https://budg-t2w9.onrender.com
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>

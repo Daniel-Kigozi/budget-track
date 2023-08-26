@@ -92,6 +92,12 @@ Example command:
   rails s
 ```
 
+### DEPLOYMENT
+- https://budg-t2w9.onrender.com9
+
+### Video Link
+- https://www.loom.com/share/475bd20e98384e9bbe16105fbd6bff3c?sid=47ade2ac-064c-42a3-8aa9-552982153724
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>

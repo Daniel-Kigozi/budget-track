@@ -94,7 +94,8 @@ test:
 
 production:
   <<: *default
-  database: budgettrack
-  username: budget
-  password: 123456
+  database: dpg-cjl0nqfv9s6c73aavljg-a.oregon-postgres.render.com
+  username: budgett_user
+  password: ZwzbrJlo0pinsDnyojmrxyjc1rW3EJgS
+ 
  

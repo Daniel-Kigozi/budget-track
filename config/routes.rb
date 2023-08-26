@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
  
 
-  get 'splash', to: 'static_pages#splash'
+  root 'splash', to: 'static_pages#splash'
   
   authenticated :user do
     root 'sections#index', as: :authenticated_root

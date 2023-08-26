@@ -1,0 +1,35 @@
+<%= render partial: 'shared/head', locals: { back: "Back", back_path: user_signed_in? ? user_sections_path(current_user) : splash_path } %>
+
+<div class="container-fluid bg-white p-3">
+  <div class="d-flex justify-content-center">
+    <div class="w-100">
+      <div class='top d-flex flex-column align-items-center p-3'>
+        <h1 class="text-center text-dark mb-3">
+          <%= image_tag @section.icon, class: "small-icon me-2", style: "width: 60px; height: 60px;" %>
+          <%= @section.name %>
+        </h1>
+        <h2 class="text-center">Total: <%= @payments.map { |item| item.amount }.sum %> $</h2>
+      </div>
+      <div class="items-container p-3">
+        <ul class="list-group list-group-flush">
+          <% @payments.each do |payment| %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div class="fs-5">
+                <%= link_to payment.name, user_section_payment_path(current_user, @section, payment.id), class: "text-decoration-none text-primary" %>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <h4 class="fs-5"><%= payment.amount %> $</h4>
+                <span class="text-primary">
+                  <b class="text-dark">Date:</b> <%= payment.created_at.strftime('%B %d, %Y') %>
+                </span>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <%= render partial: 'shared/button', locals: { button_text: "Add New Payment", button_path: new_user_section_payment_path(current_user, @section) }, button_class: "btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>

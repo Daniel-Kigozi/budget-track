@@ -4,7 +4,7 @@
 
 # 📗 Table of Contents
 
-- [📖 Blog](#about-project)
+- [📖 Budget track](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -24,7 +24,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blog <a name="about-project"></a>
+# 📖 Budget track <a name="about-project"></a>
 
 The Budget Tacker is a mobile web application where you can manage your budget: you have a list of expenses associated with a group, so that you can see how much money you spend
 

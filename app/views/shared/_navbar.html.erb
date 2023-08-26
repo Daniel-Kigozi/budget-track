@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-light bg-primary">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white d-none d-md-inline" href="#"><i class="bi bi-bell"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#"><i class="bi bi-house-door"></i> Home</a>
+        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <a href="<%= destroy_user_session_path %>" class="nav-link text-white">Sign Out</a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link text-white" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link text-white" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <a class="navbar-brand text-white text-center mx-auto" href="/">Transactions</a>
+  </div>
+</nav>

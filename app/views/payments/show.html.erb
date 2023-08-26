@@ -1,0 +1,12 @@
+<section class="d-flex flex-column pb-2 item-show">
+<%= render partial: 'shared/head', locals: { back: " back", back_path: user_section_path(current_user, @section) } %>
+<div class="d-flex flex-row justify-content-between align-items-center p-2">
+<h1 class="">Name:<%= @payment.name %></h1>
+<h4 class="">Catogery: <%= @section.name %></h4>
+</div>
+<div class="item-image d-flex flex-column align-items-center justify-content-center">
+<%= image_tag @section.icon, class: "img-fluid img-thumbnail" %>
+<h4 class="pt-2 text-dark fs-3">Amount: <%=@payment.amount %>$</h4>
+<span class="text-primary date pt-4"><b class="text-dark px-2">Date: </b><%= @payment.created_at.strftime('%B-%d-%Y') %></span>
+</div>
+</section>

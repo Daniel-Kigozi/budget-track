@@ -94,8 +94,9 @@ test:
 
 production:
   <<: *default
-  database: dpg-cjl0nqfv9s6c73aavljg-a.oregon-postgres.render.com
+  database: budgett
   username: budgett_user
   password: ZwzbrJlo0pinsDnyojmrxyjc1rW3EJgS
+  host: dpg-cjl0nqfv9s6c73aavljg-a.oregon-postgres.render.com
  
  
